@@ -1,0 +1,63 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Arial", sans-serif;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: underline;
+	margin: 20px;
+	color: navy;
+}
+
+.recipe-list {
+	list-style: none;
+}
+
+ a {
+	color: navy;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.recipe-list a:hover {
+	color: black;
+}
+
+.recipe-list li {
+	margin-bottom: 20px;
+}
+
+div {
+	width: 85%;
+	margin: 0 auto;
+}
+
+img {
+	width: 400px;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+	border-radius: 10px;
+}
+
+h2 {
+	margin: 20px 0;
+	color: navy;
+}
+
+p, li {
+	line-height: 30px;
+	font-size: 20px;
+}
+
+ul, ol {
+	margin: 0 20px;
+}
