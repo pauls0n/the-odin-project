@@ -1,0 +1,185 @@
+:root {
+	--font: "Roboto", sans-serif;
+	--dark-bg: #1f2937;
+	--accent: #3882f6;
+	--light-bg: #e5e7eb;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--font);
+}
+
+header, .hero {
+	background-color: var(--dark-bg);
+}
+
+header {
+	display: flex;
+	padding: 30px 80px;
+	gap: 20px;
+}
+
+header .logo {
+	margin-right: auto;
+	color: #f9faf8;
+	font-size: 24px;
+	font-weight: 800;
+}
+
+header a {
+	text-decoration: none;
+}
+
+header .nav {
+	color: #e5e7eb;
+	font-size: 18px;
+}
+
+.hero {
+	display: flex;
+	padding: 100px 150px;
+	justify-content: center;
+	gap: 50px;
+}
+
+.hero .left {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	flex-basis: 700px;
+}
+
+.hero .left h1 {
+	color: #f9faf8;
+	font-weight: 900;
+	font-size: 48px;
+}
+
+.hero .left p {
+	color: #e5e7eb;
+	font-size: 18px;
+}
+
+.hero .left button {
+	align-self: flex-start;
+	background-color: var(--accent);
+	color: #f9faf8;
+}
+
+button {
+	padding: 10px 30px;
+	border-radius: 10px;
+	border: none;
+	font-family: var(--font);
+	font-weight: 500;
+	font-size: 17px;
+}
+
+.hero .right {
+	background-color: rgba(195, 205, 210, 0.847);
+	height: 300px;
+	width: 800px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #f9faf8;
+}
+
+.info-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	padding: 80px 150px;
+	background-color: #f9faf8;
+	align-items: center;
+}
+
+.info-wrapper h2 {
+	color: #1f2937;
+	font-weight: 900;
+	font-size: 36px;
+}
+
+.info-boxes {
+	display: flex;
+	gap: 60px;
+}
+
+.info-box {
+	display: flex;
+	flex-basis: 200px;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.info-box div {
+	flex-basis: 200px;
+	border: 3px solid var(--accent);
+	border-radius: 10px;
+}
+
+.info-box p {
+	text-align: center;
+}
+
+.quote {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background-color: var(--light-bg);
+	padding: 80px 300px;
+	align-items: center;
+	justify-content: center;
+}
+
+blockquote {
+	font-size: 36px;
+	font-weight: 300;
+	color: #1f2937;
+	font-style: italic;
+}
+
+.quote p::before {
+	content: "- ";
+}
+
+.quote p {
+	font-weight: bold;
+	align-self: flex-end;
+	font-size: 18px;
+}
+
+.cta {
+	margin: 100px 300px;
+	padding: 30px;
+	display: flex;
+	gap: 50px;
+	background-color: var(--accent);
+	justify-content: center;
+	border-radius: 10px;
+}
+
+.cta .left {
+	color: white;
+}
+
+.cta button {
+	background-color: transparent;
+	border: 3px solid white;
+	color: white;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	background-color: var(--dark-bg);
+	color: #e5e7eb;
+}
