@@ -1,6 +1,3 @@
-let humanScore, computerScore;
-humanScore = computerScore = 0;
-
 function getComputerChoice() {
 	let random = Math.floor(Math.random() * 10) + 1;
 	let computerChoice;
@@ -24,7 +21,7 @@ function playRound() {
 	let humanChoice = getHumanChoice();
 
 	if (humanChoice === computerChoice) {
-		console.log("DRAW! You both chose " + computerChoice);
+		console.log("DRAW! You both chose " + humanChoice);
 	} else if (humanChoice === "rock" && computerChoice === "paper") {
 		console.log("LOSE! Paper beats rock");
 		computerScore++;
@@ -49,3 +46,28 @@ function playRound() {
 		humanScore++;
 	}
 }
+
+function playGame() {
+	let humanScore = 0;
+	let computerScore = 0;
+
+	playRound();
+	playRound();
+	playRound();
+	playRound();
+	playRound();
+
+	if (humanScore > computerScore) {
+		console.log(`You WIN!
+			Your score: ${humanScore}
+			Computer score: ${computerScore}`);
+	} else if (humanScore < computerScore) {
+		console.log(`You LOSE!
+			Computer score: ${computerScore}
+			Your score: ${humanScore}`);
+	} else {
+		console.log("DRAW! You both scored " + humanScore);
+	}
+}
+
+playGame();
