@@ -4,14 +4,39 @@ function getComputerChoice() {
 	if (random <= 3) {
 		computerChoice = "rock";
 	} else if (random <= 6) {
-			computerChoice = "paper";
+		computerChoice = "paper";
 	} else if (random <= 9) {
-			computerChoice = "scissors";
+		computerChoice = "scissors";
 	}
 	return computerChoice;
 }
 
 function getHumanChoice() {
-	let humanChoice = prompt("Enter your choice: (rock, paper, scissors):").toLowerCase();
+	let humanChoice = prompt("Enter your choice: (rock, paper, scissors):").toLowerCase().trim();
 	return humanChoice;
+}
+
+function playRound() {
+	let computerChoice = getComputerChoice();
+	let humanChoice = getHumanChoice();
+
+	if (humanChoice === computerChoice) {
+		console.log("DRAW! You both chose " + computerChoice);
+	} else if (humanChoice === "rock" && computerChoice === "paper") {
+		console.log("LOSE! Paper beats rock");
+	} else if (humanChoice === "rock" && computerChoice === "scissors") {
+		console.log("WIN! Rock beats scissors");
+	}
+	 else if (humanChoice === "paper" && computerChoice === "rock") {
+		console.log("WIN! Paper beats rock");
+	}
+	 else if (humanChoice === "paper" && computerChoice === "scissors") {
+		console.log("LOSE! Scissors beats paper");
+	}
+	 else if (humanChoice === "scissors" && computerChoice === "rock") {
+		console.log("LOSE! Rock beats scissors");
+	}
+	 else if (humanChoice === "scissors" && computerChoice === "paper") {
+		console.log("WIN! Scissors beats paper");
+	}
 }
