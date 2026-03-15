@@ -1,3 +1,6 @@
+let humanScore, computerScore;
+humanScore = computerScore = 0;
+
 function getComputerChoice() {
 	let random = Math.floor(Math.random() * 10) + 1;
 	let computerChoice;
@@ -24,19 +27,25 @@ function playRound() {
 		console.log("DRAW! You both chose " + computerChoice);
 	} else if (humanChoice === "rock" && computerChoice === "paper") {
 		console.log("LOSE! Paper beats rock");
+		computerScore++;
 	} else if (humanChoice === "rock" && computerChoice === "scissors") {
 		console.log("WIN! Rock beats scissors");
+		humanScore++;
 	}
 	 else if (humanChoice === "paper" && computerChoice === "rock") {
 		console.log("WIN! Paper beats rock");
+		humanScore++;
 	}
 	 else if (humanChoice === "paper" && computerChoice === "scissors") {
 		console.log("LOSE! Scissors beats paper");
+		computerScore++;
 	}
 	 else if (humanChoice === "scissors" && computerChoice === "rock") {
 		console.log("LOSE! Rock beats scissors");
+		computerScore++;
 	}
 	 else if (humanChoice === "scissors" && computerChoice === "paper") {
 		console.log("WIN! Scissors beats paper");
+		humanScore++;
 	}
 }
